@@ -1,5 +1,5 @@
 {
-  "name": "losthobbiesclient",
+  "name": "losthobbies",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "@growthbunker/vuetimeline": "^0.1.17",
     "@nuxtjs/axios": "^5.11.0",
     "@nuxtjs/bulma": "^1.2.7",
     "@nuxtjs/pwa": "^3.0.0-beta.20",

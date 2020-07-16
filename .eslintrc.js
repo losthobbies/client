@@ -2,7 +2,7 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
+    node: false
   },
   parserOptions: {
     parser: "babel-eslint"
@@ -15,6 +15,7 @@ module.exports = {
     "no-console": "off",
     "vue/max-attributes-per-line": "off",
     "eslint-disable-next-line": "off",
-    "html-indent": "off"
+    "html-indent": "off",
+    'indent':'off'
   }
 };

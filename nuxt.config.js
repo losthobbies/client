@@ -34,7 +34,9 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [
+    { src: "@/plugins/vuetimeline.js" }
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -73,20 +75,21 @@ export default {
           customProperties: false
         }
       }
-    }
+    },
+    extend(config, ctx) {
+      config.module.rules.push({
+        enforce: "pre",
+        test: /\.(js|vue)$/,
+        loader: "eslint-loader",
+        exclude: /(node_modules)/,
+        options: {
+          fix: true
+        }
+      });
   },
   /*
    ** You can extend webpack config here
    */
-  extend(config, ctx) {
-    config.module.rules.push({
-      enforce: "pre",
-      test: /\.(js|vue)$/,
-      loader: "eslint-loader",
-      exclude: /(node_modules)/,
-      options: {
-        fix: true
-      }
-    });
+  
   }
 };
