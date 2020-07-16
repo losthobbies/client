@@ -8,7 +8,7 @@ module.exports = {
     parser: "babel-eslint"
   },
   extends: ["@nuxtjs", "plugin:nuxt/recommended"],
-  plugins: [],
+  plugins: ['vue'],
   // add your custom rules here
   rules: {
     semi: 0,
