@@ -1,32 +1,35 @@
-
 <template>
   <div class="container">
-    <div class="links">
-      <nuxt-link
-        v-for="post in recommendations"
-        :key="post.id"
-        :to="{name: 'recommendations-id', params: {id: post.id}}"
-        class="button--grey"
-      >
-        {{ post.title }}
-      </nuxt-link>
+    <div v-for="rec in recommendations" :key="rec.id" class="card">
+      <header class="card-header">
+        <p class="card-header-title">
+          {{ rec.what }}
+        </p>
+      </header>
+      <footer class="card-footer">
+        <a href="#" class="card-footer-item">{{ rec.who }}</a>
+        <nuxt-link
+          :to="{ name: 'recommendations-id', params: { id: rec.id } }"
+          class="card-footer-item"
+        />
+        <!-- <a class="card-footer-item">{{ rec.category }}</a> -->
+      </footer>
     </div>
   </div>
 </template>
 
 <script>
 /* eslint-disable */
-import axios from 'axios'
+import axios from "axios";
 
 export default {
-
-asyncData(){
-return axios.get('https://jsonplaceholder.typicode.com/posts')
-    .then(response => {
-     return {recommendations: response.data}
-    });
-}
-
+  asyncData() {
+    return axios
+      .get("http://localhost:5000/api/v1/recommendations/")
+      .then(response => {
+        return { recommendations: response.data.data };
+      });
+  }
 };
 </script>
 

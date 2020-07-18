@@ -2,19 +2,17 @@
   <div class="container">
     <article>
       <h1 class="title">
-        {{ recommendations.title }}
+        {{ recommendations.what }}
       </h1>
-      <p>{{ recommendations.body }}</p>
+      <p>{{ recommendations.who }}</p>
 
-      <Comment
-        v-for="comment in comments"
-        :id="comment.id"
-        :key="comment.id"
-        :name="comment.name"
-        :comment="comment"
-      >
-        />
-      </Comment>
+      <DeepDive
+        v-for="deepdive in deepdives"
+        :id="deepdive.id"
+        :key="deepdive.id"
+        :name="deepdive.title"
+        :deepdive="deepdive"
+      />
     </article>
   </div>
 </template>
@@ -28,20 +26,20 @@ export default {
     return {
       id: this.$route.params.id,
       recommendations: {},
-      comments: {}
+      deepdives: {}
     };
   },
   mounted() {
     axios
-      .get(`https://jsonplaceholder.typicode.com/posts/${this.id}`)
+      .get(`http://localhost:5000/api/v1/recommendations/${this.id}`)
       .then(response => {
-        this.recommendations = response.data;
+        this.recommendations = response.data.data;
       });
 
     axios
-      .get(`https://jsonplaceholder.typicode.com/posts/${this.id}/comments`)
+      .get(`http://localhost:5000/api/v1/recommendations/${this.id}/deepdives`)
       .then(response => {
-        this.comments = response.data;
+        this.deepdives = response.data.data;
       });
   }
 };
