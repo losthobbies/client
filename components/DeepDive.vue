@@ -1,33 +1,31 @@
 <template>
-  <div class="container">
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          {{ deepdive.title }}
-        </p>
-        <a href="#" class="card-header-icon" aria-label="more options">
-          <span class="icon">
-            <i class="fas fa-angle-down" aria-hidden="true" />
-          </span>
-        </a>
-      </header>
-      <div class="card-content">
-        <div class="content">
-          {{ deepdive.url }}
-        </div>
-      </div>
-      <footer class="card-footer" />
-      <div class="field is-grouped is-grouped-multiline">
-        <div class="control">
-          <div class="tags are-medium">
-            <!-- <span
-              v-for="ddc in deepdive.category"
-              :key="ddc"
-              class="tag is-primary is-light"
-            >{{ ddc }}</span> -->
+  <div class="column is-7">
+    <div class="box content">
+      <article>
+        <h4>{{ deepdive.title }}</h4>
+        <div class="media">
+          <div class="media-left">
+            <p class="image is-32x32">
+              <img src="http://bulma.io/images/placeholders/128x128.png">
+            </p>
+          </div>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <!-- <a href="{{deepdive.link}}">Link</a> -->
+                <a href="#">@jsmith</a>
+                {{ deepdive.createdAt }} &nbsp;
+                <span class="tag">Question</span>
+              </p>
+            </div>
+          </div>
+          <div class="media-right">
+            <span class="has-text-grey-light">
+              <i class="fa fa-comments" /> 1
+            </span>
           </div>
         </div>
-      </div>
+      </article>
     </div>
   </div>
 </template>
