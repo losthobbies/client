@@ -1,5 +1,5 @@
 <template>
-  <div class="column is-7">
+  <div class="column is-8">
     <div class="box content">
       <article>
         <h4>{{ deepdive.title }}</h4>
@@ -14,8 +14,8 @@
               <p>
                 <!-- <a href="{{deepdive.link}}">Link</a> -->
                 <a href="#">@jsmith</a>
-                {{ deepdive.createdAt }} &nbsp;
-                <span class="tag">Question</span>
+                <time>{{ deepdive.createdAt | formatDate }}</time>
+                <span v-for="v in deepdive.category" :key="v" class="tag">{{ v }}</span>
               </p>
             </div>
           </div>
@@ -33,6 +33,13 @@
 <script>
 export default {
   name: 'DeepDive',
+  filters: {
+    formatDate (value) {
+      const d = new Date(value);
+      return d.toLocaleDateString('en-GB');
+    }
+  },
+
   props: ['deepdive']
 };
 </script>
