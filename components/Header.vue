@@ -26,4 +26,9 @@
     </section>
   </div>
 </template>
-<script>
+<style scoped>
+.container {
+  height: 100px;
+  padding-top: 10px;
+}
+</style>

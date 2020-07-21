@@ -1,20 +1,22 @@
 <template>
   <div class="container">
     <div class="columns">
-      <div v-for="rec in recommendations" :key="rec.id" class="card">
-        <header class="card-header">
-          <p class="card-header-title">
-            {{ rec.what }}
-          </p>
-        </header>
-        <footer class="card-footer">
-          <a href="#" class="card-footer-item">{{ rec.who }}</a>
-          <nuxt-link
-            :to="{ name: 'recommendations-id', params: { id: rec.id } }"
-            class="card-footer-item"
-          />
-          <!-- <a class="card-footer-item">{{ rec.category }}</a> -->
-        </footer>
+      <div v-for="rec in recommendations" :key="rec.id" class="column is-3">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              {{ rec.what }}
+            </p>
+          </header>
+          <footer class="card-footer">
+            <a href="#" class="card-footer-item">{{ rec.who }}</a>
+            <nuxt-link
+              :to="{ name: 'recommendations-id', params: { id: rec.id } }"
+              class="card-footer-item"
+            />
+            <!-- <a class="card-footer-item">{{ rec.category }}</a> -->
+          </footer>
+        </div>
       </div>
     </div>
   </div>
@@ -36,10 +38,12 @@ export default {
 </script>
 
 <style scoped>
-.links {
-  padding-top: 15px;
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.links > .button--grey {
-  margin: 5px;
+body > footer {
+  margin-top: auto;
 }
 </style>
