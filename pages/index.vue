@@ -1,19 +1,21 @@
 <template>
   <div class="container">
-    <div v-for="rec in recommendations" :key="rec.id" class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          {{ rec.what }}
-        </p>
-      </header>
-      <footer class="card-footer">
-        <a href="#" class="card-footer-item">{{ rec.who }}</a>
-        <nuxt-link
-          :to="{ name: 'recommendations-id', params: { id: rec.id } }"
-          class="card-footer-item"
-        />
-        <!-- <a class="card-footer-item">{{ rec.category }}</a> -->
-      </footer>
+    <div class="columns">
+      <div v-for="rec in recommendations" :key="rec.id" class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            {{ rec.what }}
+          </p>
+        </header>
+        <footer class="card-footer">
+          <a href="#" class="card-footer-item">{{ rec.who }}</a>
+          <nuxt-link
+            :to="{ name: 'recommendations-id', params: { id: rec.id } }"
+            class="card-footer-item"
+          />
+          <!-- <a class="card-footer-item">{{ rec.category }}</a> -->
+        </footer>
+      </div>
     </div>
   </div>
 </template>

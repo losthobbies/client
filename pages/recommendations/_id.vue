@@ -12,30 +12,38 @@
           </div>
           <div class="card-content">
             <div class="media">
-              <div class="media-left">
-                <figure class="image is-48x48">
-                  <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-                </figure>
-              </div>
+              <div class="media-left" />
               <div class="media-content">
                 <p class="title is-4">
                   {{ recommendation.what }}
                 </p>
-                <p class="subtitle is-5">
-                  {{ recommendation.who }}
-                </p>
+                <div class="field is-grouped is-grouped-multiline">
+                  <div class="control">
+                    <div class="tags has-addons">
+                      <span class="tag is-dark">Who</span>
+                      <span class="tag is-info">{{ recommendation.who }}</span>
+                    </div>
+                  </div>
+                  <div class="control">
+                    <div class="tags has-addons">
+                      <span class="tag is-dark">Where</span>
+                      <span class="tag is-primary">
+                        <a :href="recommendation.where">--></a>
+                      </span>
+                    </div>
+                  </div>
+                  <!-- <div class="control">
+                    <div class="tags has-addons">
+                      <span class="tag is-info">When</span>
+                      <span class="tag is-dark">{{ recommendation.who }}</span>
+                    </div>
+                  </div>-->
+                </div>
               </div>
             </div>
 
             <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Phasellus nec iaculis mauris.
-              <a
-                :href="recommendation.where"
-              >Where</a>
-
-              <br>
-              <time>{{ recommendation.createdAt | formatDate }}</time>
+              <!-- <time>{{ recommendation.createdAt | formatDate }}</time> -->
             </div>
           </div>
         </div>

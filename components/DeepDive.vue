@@ -1,21 +1,17 @@
 <template>
-  <div class="column is-8">
+  <div class="column is-9">
     <div class="box content">
       <article>
-        <h4>{{ deepdive.title }}</h4>
+        <h5>{{ deepdive.title }}</h5>
         <div class="media">
-          <div class="media-left">
-            <p class="image is-32x32">
-              <img src="http://bulma.io/images/placeholders/128x128.png">
-            </p>
-          </div>
+          <div class="media-left" />
           <div class="media-content">
             <div class="content">
               <p>
                 <!-- <a href="{{deepdive.link}}">Link</a> -->
                 <a href="#">@jsmith</a>
                 <time>{{ deepdive.createdAt | formatDate }}</time>
-                <span v-for="v in deepdive.category" :key="v" class="tag">{{ v }}</span>
+                <span v-for="v in deepdive.category" :key="v" class="tag is-info is-light">{{ v }}</span>
               </p>
             </div>
           </div>

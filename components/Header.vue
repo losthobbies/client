@@ -14,6 +14,11 @@
               <h3 style="color: coral; font-weight:bold">
                 FAQ
               </h3>
+            </nuxt-link>&nbsp;
+            <nuxt-link to="/login">
+              <h3 style="color: coral; font-weight:bold">
+                LOGIN
+              </h3>
             </nuxt-link>
           </div>
         </div>
