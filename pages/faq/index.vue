@@ -3,9 +3,9 @@
     <div class="container">
       <div class="columns">
         <div class="column">
-          <h2 class="title section-title centered">
+          <!-- <h2 class="title section-title centered">
             Frequently Asked Questions
-          </h2><br>
+          </h2><br> -->
           <article class="media">
             <figure class="media-left">
               <p class="image is-64x64">

@@ -1,7 +1,9 @@
 <template>
-  <section class="footer">
-    © 2020 LostHobbies. All rights reserved
-  </section>
+  <div class="container">
+    <section class="footer">
+      © 2020 LostHobbies. All rights reserved
+    </section>
+  </div>
 </template>
 <style scoped>
 .footer {
@@ -9,6 +11,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 20px;
+  height: 10px;
 }
 </style>

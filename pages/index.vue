@@ -32,6 +32,10 @@ export default {
       .get("http://localhost:5000/api/v1/recommendations/")
       .then(response => {
         return { recommendations: response.data.data };
+      }).catch(error => {
+        console.log(error);
+        return {recommendations: null};
+
       });
   }
 };
