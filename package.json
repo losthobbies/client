@@ -12,11 +12,14 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@growthbunker/vuetimeline": "^0.1.17",
     "@nuxtjs/axios": "^5.11.0",
     "@nuxtjs/bulma": "^1.2.7",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
-    "nuxt": "^2.13.0"
+    "nuxt": "^2.13.0",
+    "nuxt-fontawesome": "^0.4.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",

@@ -49,6 +49,7 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     "@nuxtjs/eslint-module"
   ],
+
   /*
    ** Nuxt.js modules
    */
@@ -57,7 +58,24 @@ export default {
     "@nuxtjs/bulma",
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
-    "@nuxtjs/pwa"
+    "@nuxtjs/pwa",
+    ['nuxt-fontawesome', {
+      component: 'fa',
+      imports: [
+       {
+         set: '@fortawesome/free-solid-svg-icons',
+         icons: ['fas']
+       },
+       {
+         set:'@fortawesome/free-brands-svg-icons',
+         icons: ['fab']
+       }
+     ]
+    },
+    // ['@nuxtjs/google-analytics', {
+    //   id: 'UA-150411912-1'
+    // }]
+  ]
   ],
   /*
    ** Axios module configuration

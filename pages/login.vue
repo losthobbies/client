@@ -62,6 +62,7 @@
               <span class="icon">
                 <i class="fab fa-instagram" />
               </span> &emsp;
+              <fa icon="cog" />
               <span class="icon">
                 <i class="fab fa-github" />
               </span> &emsp;
