@@ -54,20 +54,16 @@
           <div class="level-left">
             <div class="level-item">
               <span class="icon">
-                <i class="fab fa-twitter" />
+                <fa :icon="['fab', 'twitter']" />
               </span> &emsp;
               <span class="icon">
-                <i class="fab fa-facebook" />
+                <fa :icon="['fab', 'facebook']" />
               </span> &emsp;
               <span class="icon">
-                <i class="fab fa-instagram" />
-              </span> &emsp;
-              <fa icon="cog" />
-              <span class="icon">
-                <i class="fab fa-github" />
+                <fa :icon="['fab', 'instagram']" />
               </span> &emsp;
               <span class="icon">
-                <i class="fas fa-envelope" />
+                <fa :icon="['fab', 'envelope']" />
               </span>
             </div>
           </div>
